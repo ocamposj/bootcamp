@@ -22,7 +22,20 @@ class Persona:      # Definimos la clase, una receta para crear un objeto
         self.mi_altura = altura_cm
         print("Mido", self.mi_altura,"cm")
 
+    def asignar_nac(self, mi_nacionalidad):
+        self.nacionalidad = mi_nacionalidad
+
+    def saludo(self):
+        print("Hola, soy", self.mi_nombre, "y mi nacionalidad es", self.nacionalidad)
+
 pepe = Persona("Pepito")
 pepe.asignar_edad(22)
 pepe.fav_color("azul")
 pepe.altura(170)
+
+# Ej. Agregar un método a la clase Persona que asigne una nacionalidad
+# y otro método Saludo que imprima "Hola, soy _nombre_ y mi nacionalidad 
+# es _nacionalidad__"
+
+pepe.asignar_nac("paraguaya")
+pepe.saludo()

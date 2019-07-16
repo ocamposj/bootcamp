@@ -45,6 +45,13 @@ class Persona:      # Definimos la clase, una receta para crear un objeto
         else:
             print("Deberías crecer más")
 
+    def asignar_peso(self,mi_peso):
+        self.peso = mi_peso
+    
+    def imc_calc(self):
+        self.imc = self.peso / (self.altura/100)**2
+        print("Tu índice de masa corporal (IMC) es:", self.imc)
+
 pepe = Persona("Pepito")
 pepe.asignar_edad(22)
 pepe.fav_color("azul")
@@ -57,8 +64,11 @@ pepe.asignar_nac("paraguaya")
 pepe.saludo()
 
 pepe.asignar_alt(157)
-pepe.posicion()
-pepe.crecimiento(18)
-pepe.posicion()
-pepe.crecimiento(25)
-pepe.posicion()
+pepe.asignar_peso(80)
+#pepe.posicion()
+# pepe.crecimiento(18)
+# pepe.posicion()
+# pepe.crecimiento(25)
+# pepe.posicion()
+
+pepe.imc_calc()

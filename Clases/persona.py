@@ -18,9 +18,9 @@ class Persona:      # Definimos la clase, una receta para crear un objeto
         self.color_favorito = color
         print("Mi color favorito es", self.color_favorito)
 
-    def altura(self,altura_cm):
-        self.mi_altura = altura_cm
-        print("Mido", self.mi_altura,"cm")
+    def asignar_alt(self,altura_cm):
+        self.altura = altura_cm
+        print("Mido", self.altura,"cm")
 
     def asignar_nac(self, mi_nacionalidad):
         self.nacionalidad = mi_nacionalidad
@@ -28,10 +28,26 @@ class Persona:      # Definimos la clase, una receta para crear un objeto
     def saludo(self):
         print("Hola, soy", self.mi_nombre, "y mi nacionalidad es", self.nacionalidad)
 
+    def crecimiento(self,creci):
+        self.altura = self.altura + creci
+        print("Mido", self.altura,"cm")
+
+    def posicion(self):
+        if self.altura > 195:
+            print("Podrías jugar como pivot")
+        
+        elif self.altura > 170:
+            print("Podrías jugar como alero")
+        
+        elif self.altura > 160:
+            print("Podrías jugar como base")
+        
+        else:
+            print("Deberías crecer más")
+
 pepe = Persona("Pepito")
 pepe.asignar_edad(22)
 pepe.fav_color("azul")
-pepe.altura(170)
 
 # Ej. Agregar un método a la clase Persona que asigne una nacionalidad
 # y otro método Saludo que imprima "Hola, soy _nombre_ y mi nacionalidad 
@@ -39,3 +55,10 @@ pepe.altura(170)
 
 pepe.asignar_nac("paraguaya")
 pepe.saludo()
+
+pepe.asignar_alt(157)
+pepe.posicion()
+pepe.crecimiento(18)
+pepe.posicion()
+pepe.crecimiento(25)
+pepe.posicion()
